@@ -375,6 +375,74 @@
             font-weight: 600;
         }
 
+        /* Support Our Mission Section */
+        .support-mission {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            text-align: center;
+        }
+
+        .support-mission-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .support-mission h2 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .support-mission p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .support-mission ul {
+            list-style: none;
+            margin-bottom: 2.5rem;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .support-mission ul li {
+            padding: 0.8rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .support-mission ul li::before {
+            content: '💚';
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+        }
+
+        .donate-upi-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #fff;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(251, 191, 36, 0.3);
+        }
+
+        .donate-upi-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+        }
+
         /* Social Welfare */
         .social-welfare {
             padding: 5rem 2rem;
@@ -525,15 +593,70 @@
         .trustees-content {
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .trustees-table {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .trustees-table thead {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: #fff;
+        }
+
+        .trustees-table th {
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .trustees-table td {
+            padding: 1.2rem;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .trustees-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .trustees-table tbody tr:hover {
+            background: #f0f9ff;
+        }
+
+        .donation-qr-section {
+            max-width: 700px;
+            margin: 0 auto;
             background: #f0f9ff;
             padding: 3rem;
             border-radius: 15px;
-            border: 2px dashed #1e40af;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
-        .trustees-content p {
-            font-size: 1.2rem;
+        .donation-qr-section p {
+            font-size: 1.1rem;
             color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .donation-qr-section img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         /* Poster Showcase */
@@ -720,6 +843,15 @@
             .footer-content {
                 grid-template-columns: 1fr;
             }
+
+            .trustees-table {
+                font-size: 0.9rem;
+            }
+
+            .trustees-table th,
+            .trustees-table td {
+                padding: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -745,7 +877,7 @@
                 <li><a href="#facilities">Facilities</a></li>
                 <li><a href="#management">Management</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#donate" class="donate-btn">Donate Now</a></li>
+                <li><a href="upi://pay?pa=9005806464@axl&pn=Sudhanshu%20Foundation&cu=INR" class="donate-btn">Donate Now</a></li>
             </ul>
         </nav>
     </header>
@@ -856,6 +988,21 @@
         </div>
     </section>
 
+    <!-- Support Our Mission Section -->
+    <section class="support-mission">
+        <div class="support-mission-content">
+            <h2>Support Our Mission</h2>
+            <p>Your generous contribution enables Sudhanshu Foundation to continue its vital work in transforming lives and building a better future for those in need. Every donation makes a meaningful difference.</p>
+            <ul>
+                <li>Providing quality education to underprivileged children</li>
+                <li>Supporting needy students with scholarships and resources</li>
+                <li>Implementing community welfare and development programs</li>
+                <li>Empowering marginalized sections of society through skill development</li>
+            </ul>
+            <a href="upi://pay?pa=9005806464@axl&pn=Sudhanshu%20Foundation&cu=INR" class="donate-upi-btn">Donate via UPI</a>
+        </div>
+    </section>
+
     <!-- Social Welfare -->
     <section class="social-welfare" id="welfare">
         <h2 class="section-title">Social Welfare & Charity</h2>
@@ -922,7 +1069,33 @@
     <section class="trustees">
         <h2 class="section-title">Board of Trustees</h2>
         <div class="trustees-content">
-            <p>Trustee details will be announced soon.</p>
+            <table class="trustees-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Shailendra Tiwari</td>
+                        <td>Trustee</td>
+                    </tr>
+                    <tr>
+                        <td>Abhishek Mishra</td>
+                        <td>Trustee</td>
+                    </tr>
+                    <tr>
+                        <td>Neeraj Yadav</td>
+                        <td>Trustee</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="donation-qr-section">
+                <p>Sudhanshu Foundation is dedicated to serving underprivileged children, advancing education, and fostering social welfare in our communities. Your generous contribution directly supports our mission and helps us create lasting positive change. We invite you to scan the QR code below or use UPI to make a secure donation and be part of our transformative journey.</p>
+                <img src="donate-qr.png" alt="Donation QR Code">
+            </div>
         </div>
     </section>
 
